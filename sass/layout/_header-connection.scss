@@ -1,0 +1,38 @@
+.connection {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.connection__item:not(:last-child) {
+	margin-right: 50px;
+}
+
+.connection__link {
+	display: flex;
+	align-items: center;
+
+	@include font(500, 14px, 1.14, null, 0.02em);
+
+	color: var(--text-color);
+
+	transition: color var(--duration-ms) var(--timing-function);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.connection__icon {
+	margin-right: 10px;
+
+	fill: #757575;
+
+	transition: fill var(--duration-ms) var(--timing-function);
+
+	.connection__link:hover &,
+	.connection__link:focus & {
+		fill: #2196f3;
+	}
+}

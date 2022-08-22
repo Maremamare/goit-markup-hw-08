@@ -1,0 +1,16 @@
+.logo {
+	font-family: var(--second-font);
+	@include font(700, 26px, 1.19, null, 0.03em);
+
+	display: inline-block;
+
+	transition: color var(--duration-ms) var(--timing-function);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+	&--color-accent {
+		color: var(--accent-color);
+	}
+}
