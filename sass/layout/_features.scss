@@ -4,12 +4,25 @@
 
 .features-list {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 30px;
 }
 
-.features__border {
+.features-list__item {
+	width: 100%;
+
+	@include tablet {
+		width: calc((100% - 30px) / 2);
+	}
+
+	@include desktop {
+		width: calc((100% - 90px) / 4);
+	}
+}
+
+.features-list__border {
 	margin-bottom: 30px;
-	width: 270px;
+	width: 100%;
 	height: 120px;
 
 	display: flex;
@@ -20,15 +33,19 @@
 	border-radius: 4px;
 }
 
-.features__subtitle {
+.features-list__subtitle {
 	margin-bottom: 10px;
 
-	@include font(700, 14px, 1.14, null, 0.03em);
+	@include font(700, 14px, 1.14, center, 0.03em);
+
+	@include tablet {
+		text-align: left;
+	}
 
 	text-transform: uppercase;
 }
 
-.features__text {
+.features-list__text {
 	min-width: 270;
 
 	@include font(null, 14px, 1.7, null, 0.03em);

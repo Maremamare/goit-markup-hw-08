@@ -1,14 +1,34 @@
 .client__title {
-	margin-bottom: 50px;
+	margin-bottom: 30px;
+	@include desktop {
+		margin-bottom: 50px;
+	}
 }
 
 .client-list {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 30px;
+
+	@include desktop {
+		flex-wrap: nowrap;
+	}
+}
+
+.client-list__item {
+	width: calc((100% - 30px) / 2);
+
+	@include tablet {
+		width: calc((100% - 60px) / 3);
+	}
+
+	@include desktop {
+		width: calc((100% - 140px) / 6);
+	}
 }
 
 .client-list__link {
-	width: 170px;
+	width: 100%;
 	height: 92px;
 
 	display: flex;
