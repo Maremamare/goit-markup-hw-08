@@ -1,14 +1,14 @@
-.features {
+.benefits {
 	background-color: var(--bg-color);
 }
 
-.features-list {
+.benefits-list {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
 }
 
-.features-list__item {
+.benefits-list__item {
 	width: 100%;
 
 	@include tablet {
@@ -20,7 +20,7 @@
 	}
 }
 
-.features-list__border {
+.benefits-list__border {
 	margin-bottom: 30px;
 	width: 100%;
 	height: 120px;
@@ -33,7 +33,7 @@
 	border-radius: 4px;
 }
 
-.features-list__subtitle {
+.benefits-list__subtitle {
 	margin-bottom: 10px;
 
 	@include font(700, 14px, 1.14, center, 0.03em);
@@ -45,7 +45,7 @@
 	text-transform: uppercase;
 }
 
-.features-list__text {
+.benefits-list__text {
 	min-width: 270;
 
 	@include font(null, 14px, 1.7, null, 0.03em);

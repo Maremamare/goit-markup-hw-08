@@ -2,11 +2,23 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
-	flex-basis: calc(100% / 3);
+}
+
+.projects-list__part {
+	@include tablet {
+		flex-basis: calc((100% - 30px) / 2);
+	}
+	@include desktop {
+		flex-basis: calc((100% - 60px) / 3);
+	}
 }
 
 .projects-list__link {
-	display: block;
+	@include tablet {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
 
 	transition: box-shadow var(--duration-ms) var(--timing-function);
 
@@ -19,6 +31,10 @@
 .projects-list__wrap {
 	position: relative;
 	overflow: hidden;
+
+	@include tablet {
+		flex-grow: 1;
+	}
 }
 
 .projects-list__over {

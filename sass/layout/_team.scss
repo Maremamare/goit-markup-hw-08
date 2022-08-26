@@ -1,21 +1,21 @@
-.comand {
+.team {
 	background-color: #f5f4fa;
 }
 
-.comand__title {
+.team__title {
 	margin-bottom: 30px;
 	@include desktop {
 		margin-bottom: 50px;
 	}
 }
 
-.comand-list {
+.team-list {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
 }
 
-.comand-list__item {
+.team-list__item {
 	width: 100%;
 
 	@include tablet {
@@ -29,14 +29,14 @@
 	border-radius: 0px 0px 4px 4px;
 }
 
-.comand-list__subtitle {
+.team-list__subtitle {
 	margin-top: 30px;
 	margin-bottom: 10px;
 
 	@include font(500, 16px, 1.18, center, 0.03em);
 }
 
-.comand-list__text {
+.team-list__text {
 	margin-bottom: 16px;
 
 	@include font(null, 16px, 1.18, center, 0.03em);
@@ -44,7 +44,7 @@
 	color: var(--text-color);
 }
 
-.comand-soc {
+.team-soc {
 	display: flex;
 	justify-content: center;
 	gap: 10px;
@@ -54,7 +54,7 @@
 	}
 }
 
-.comand-soc__link {
+.team-soc__link {
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
@@ -73,6 +73,6 @@
 	}
 }
 
-.comand-soc__icon {
+.team-soc__icon {
 	fill: currentColor;
 }
