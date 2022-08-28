@@ -3,11 +3,24 @@
 	padding-top: 60px;
 	padding-bottom: 60px;
 	> .container {
-		margin: 0;
 		display: flex;
 		flex-wrap: wrap;
 		text-align: center;
 		justify-content: center;
+		align-items: baseline;
+
+		@include desktop {
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: baseline;
+			text-align: left;
+		}
+	}
+
+	.footer-contacts {
+		@include tablet {
+			flex-basis: 50%;
+		}
 	}
 }
 
@@ -21,6 +34,8 @@
 
 .address {
 	margin-bottom: 60px;
+	@include desktop {
+	}
 }
 
 .address__item:not(:last-child) {

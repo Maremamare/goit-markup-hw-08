@@ -1,19 +1,41 @@
 .connection {
-	display: flex;
+	display: none;
 	align-items: center;
 	margin-left: auto;
+	@include tablet {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-left: auto;
+	}
+	@include desktop {
+		display: flex;
+		flex-direction: unset;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
 
 .connection__item:not(:last-child) {
-	margin-right: 50px;
+	@include tablet {
+		margin-bottom: 10px;
+	}
+	@include desktop {
+		margin-right: 50px;
+		margin-bottom: 0;
+	}
 }
 
 .connection__link {
 	display: flex;
 	align-items: center;
 
-	@include font(500, 14px, 1.14, null, 0.02em);
-
+	@include tablet {
+		@include font(500, 12px, 1.16, null, 0.02em);
+	}
+	@include desktop {
+		@include font(500, 14px, 1.14, null, 0.02em);
+	}
 	color: var(--text-color);
 
 	transition: color var(--duration-ms) var(--timing-function);
@@ -26,6 +48,10 @@
 
 .connection__icon {
 	margin-right: 10px;
+
+	@include tablet {
+		margin-right: 8px;
+	}
 
 	fill: #757575;
 

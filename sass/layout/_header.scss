@@ -1,6 +1,15 @@
 .header {
-	padding-top: 24px;
-	padding-bottom: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	@include tablet {
+		padding-top: 21px;
+		padding-bottom: 21px;
+	}
+	@include desktop {
+		padding-top: 24px;
+		padding-bottom: 25px;
+	}
+
 	border-bottom: 1px solid #ececec;
 	> .container {
 		display: flex;
@@ -9,20 +18,37 @@
 }
 
 .navigation {
-	display: flex;
+	display: none;
 	align-items: center;
+	@include tablet {
+		display: flex;
+	}
+	@include desktop {
+		display: flex;
+	}
 }
 
-.navigation__logo {
-	margin-right: 93px;
+.navigation__list {
+	@include tablet {
+		display: flex;
+		margin-right: 84px;
+	}
+	@include desktop {
+		display: flex;
+	}
+}
+
+.header__logo {
+	@include tablet {
+		margin-right: 88px;
+	}
+	@include desktop {
+		margin-right: 93px;
+	}
 }
 
 .logo--color-dark {
 	color: #000000;
-}
-
-.navigation__list {
-	display: flex;
 }
 
 .navigation__item:not(:last-child) {
@@ -55,6 +81,9 @@
 
 		left: 0;
 		bottom: -1px;
+		@include tablet {
+			bottom: -2px;
+		}
 		display: block;
 		border-radius: 2px;
 
