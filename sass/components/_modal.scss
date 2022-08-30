@@ -13,11 +13,14 @@
 	top: 50%;
 	left: 50%;
 	padding: 40px;
+	width: 450px;
 	width: calc(100% - 30px);
-	min-height: 609px;
+	max-width: 450px;
+	height: 97%;
 
 	@include tablet {
 		max-width: 450px;
+		min-height: 609px;
 	}
 
 	@include desktop {
