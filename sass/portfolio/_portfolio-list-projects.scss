@@ -31,10 +31,6 @@
 .projects-list__wrap {
 	position: relative;
 	overflow: hidden;
-
-	@include tablet {
-		flex-grow: 1;
-	}
 }
 
 .projects-list__over {
@@ -65,6 +61,9 @@
 	border-bottom: 1px solid #eeeeee;
 
 	padding: 20px 24px;
+	@include tablet {
+		flex-grow: 1;
+	}
 }
 
 .projects-list__subtitle {
